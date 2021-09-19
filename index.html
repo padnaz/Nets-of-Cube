@@ -1,0 +1,98 @@
+<html lang="en">
+  <head>
+    <!--Page written by Cael Coonai-->
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="favicon.png">
+    <title>Net to Cube</title>
+  </head>
+  <body >
+    <div id='image-stage'>
+      <!--Stage-->
+    </div>
+    <div class='word-box'>
+      <div id='logo'>
+        <img src="assets/images/logo.png">
+      </div>
+      <div id='words'>
+        <h1>Net to Cube</h1>
+        <div class='vert-space'></div>
+        <p>
+          Click on the coloured squares to add faces to the net of the cube.
+          When done, click the 'Fold' and move the slider to fold the net into
+          the cube.
+        </p>
+      </div>
+    </div>
+    <div class='vert-space'></div>
+    <div class='viewers'>
+      <div class='net-builder'>
+        <div id='pallette'>
+          <!--Pallette-->
+        </div>
+        <div id='net'>
+          <div id='net-1'></div>
+          <div id='net-2'></div>
+          <div id='net-3'></div>
+          <div id='net-4'></div>
+          <div id='net-5'></div>
+          <div id='net-6'></div>
+          <div id='net-7'></div>
+          <div id='net-8'></div>
+          <div id='net-9'></div>
+          <div id='net-10'></div>
+          <div id='net-11'></div>
+        </div>
+      </div>
+      <div class='cube-viewer'>
+        <div id='fold-err'>
+          <!--Net invalid notification-->
+        </div>
+        <div id='button-list'>
+          <button type="button" class="btn btn-info" id="fold-button"
+            onclick="clickListen('fold-button')">
+            Fold
+          </button>
+          <input type="range" class="form-range" id="fold-slider"min="0"
+            max="6E6" disabled="" oninput="clickListen('fold-slider')">
+        </div>
+        <div class='geogebra'>
+          <div id="ggb-element"></div>
+        </div>
+      </div>
+    </div>
+    <div class='vert-space'></div>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/math.js"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script>
+      var params = {
+        "scaleContainerClass": "geogebra",
+        "autoHeight": true,
+        "width": 1000,
+        "height": 800,
+        "enableLabelDrags": false,
+        "preventFocus": false,
+        "enableRightClick": false,
+        "borderColor": "#000000",
+        "useBrowserForJS": true,
+        "showFullscreenButton": true,
+        "capturingThreshold": 1,
+        "ggbBase64": "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"
+      };
+      params.appletOnLoad = function(){
+        updateCubeView();
+        ggbApplet.setCoordSystem(-9,9,-9,9,-7,11,false);
+        new FoldingFace('X','X',6,6);
+        ggb_applet_loaded = true;
+      };
+      var applet = new GGBApplet(params, true);
+      window.addEventListener("load", function() {
+        applet.setHTML5Codebase("https://www.geogebra.org/apps/5.0.659.0/web3d");
+        applet.inject('ggb-element');
+      });
+    </script>
+  </body>
+</html>

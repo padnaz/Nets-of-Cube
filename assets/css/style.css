@@ -1,0 +1,108 @@
+/*Styling written by Cael Coonai*/
+
+.body{
+  background: no-repeat;
+}
+
+.word-box{
+  border: 1px solid;
+  border-radius: 10px;
+  width: 60%;
+  text-align: left;
+  margin: 5px auto;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: rgba(253, 233, 200, 0.95);
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.word-box #words{
+  width: 50%;
+}
+
+.word-box img{
+  max-height: 256px;
+}
+
+.word-box h2{
+  text-align: center;
+}
+
+.cube-viewer{
+  max-width: 50%;
+}
+
+.vert-space{
+  height: 30px;
+}
+
+.net-builder, .cube-viewer{
+  min-width: 730px;
+  border-radius: 2px;
+  margin: auto;
+}
+
+.viewers{
+  display: flex;
+  justify-content:space-evenly;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  max-width: 90%;
+  padding: 2px;
+}
+
+#fold-err{
+  margin-block: 10px auto;
+}
+
+#pallette{
+  border: black solid 1px;
+  border-radius: 5px;
+  display: flex;
+  justify-content:center;
+  background-color: rgba(253, 233, 200, 0.95);
+}
+
+#net{
+  border: black solid 1px;
+  border-radius: 5px;
+  min-width: 730px;
+  background-color: rgba(253, 233, 200, 0.95);
+  justify-self: center;
+  padding: 10px;
+  max-width: 50%;
+}
+
+#button-list{
+  border: black solid 1px;
+  background-color: rgba(253, 233, 200, 0.95);
+  min-width: 730px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px auto;
+}
+
+#fold-slider{
+  width: 80%;
+  padding-top: 2%;
+}
+#fold-button, #fold-slider{
+  margin: 5px;
+}
+
+#net div{
+  margin: 0 auto;
+}
+
+#pallette img{
+  padding: 10px;
+}
+
+#image-stage img{
+  height: 0px;
+  width: 0px;
+}
